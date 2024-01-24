@@ -3,6 +3,8 @@ const app = express()
 const cors = require('cors')
 const port = process.env.PORT || 3001;
 
+console.log(port, process.env.PORT)
+
 app.use(cors())
 
 app.use(express.json())
