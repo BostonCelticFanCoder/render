@@ -3,7 +3,6 @@ const app = express()
 const cors = require('cors')
 const port = process.env.PORT || 3001;
 
-console.log(port, process.env.PORT)
 
 app.use(cors())
 
@@ -95,6 +94,7 @@ const unknownEndpoint = (request, response) => {
 
 app.use(unknownEndpoint)
 
-app.listen(port, (err) => {
+app.listen(port, () => {
+  console.log(port, process.env.PORT)
   console.log(`Server running on port ${port}`)
 })                                                                                        
